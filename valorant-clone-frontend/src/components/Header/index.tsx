@@ -1,5 +1,7 @@
+import { SimpleButton } from '@components/Buttons/SimpleButton';
 import { RiotLogo } from '@components/RiotLogo';
 import { ValorantSimbol } from '@components/ValorantSimbol';
+import { Globe } from 'react-feather';
 import styles from './styles.module.scss';
 
 export function Header() {
@@ -40,6 +42,10 @@ export function Header() {
                         </li>
                     </ul>
                 </nav>
+            </div>
+            <div className={styles['menu-right']}>
+                <Globe size={24} />
+                <SimpleButton label="Jogue agora!" />
             </div>
         </div>
     );
