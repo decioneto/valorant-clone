@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import { Header } from '@components/Header';
+import { Header } from '@components/Global/Header';
 
 export function Router() {
     return (

@@ -1,0 +1,13 @@
+.menu-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        list-style: none;
+    }
+}
