@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { RiotLogo } from '@components/Global/RiotLogo';
 import { ChevronDown } from '@components/Global/SVGIcon/ChevronDown';
 import { ValorantSimbol } from '@components/Global/ValorantSimbol';
@@ -124,18 +125,40 @@ const MENU_ITEMS: MenuItemProps[] = [
 ];
 
 export function MenuLeft() {
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [newMenu, setNewMenu] = useState(MENU_ITEMS);
+
+    function windowResizeWidth() {
+        setWindowWidth(window.innerWidth);
+        let windowSize = windowWidth;
+        let menu = MENU_ITEMS;
+        console.log(windowWidth);
+        switch (true) {
+            case windowSize > 1400:
+                console.log('1400');
+                break;
+            default:
+                console.log('default');
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('resize', windowResizeWidth);
+        return () => window.removeEventListener('reset', windowResizeWidth);
+    }, [windowWidth]);
+
     return (
         <div className={styles['menu-left']}>
             <span className={styles['menu-logo']}>
                 <RiotLogo fill="#fff" width="85" />
                 <ChevronDown />
             </span>
-            <a href="@">
+            <a href="#">
                 <ValorantSimbol color="#fff" width="25" />
             </a>
             <nav>
                 <ul>
-                    {MENU_ITEMS.map((item) => (
+                    {newMenu.map((item) => (
                         <MenuItem
                             key={item.label}
                             label={item.label}

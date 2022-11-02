@@ -5,7 +5,7 @@ export function RiotLogo(props: RiotLogoProps) {
         <svg
             xmlns="http://www.w3.org/2000/svg"
             width={props.width}
-            height="auto"
+            height="100%"
             fill={props.fill}
             viewBox="0 0 85 27"
         >
