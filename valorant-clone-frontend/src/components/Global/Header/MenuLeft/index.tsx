@@ -9,6 +9,23 @@ const MENU_ITEMS: MenuItemProps[] = [
     {
         label: 'Informações do jogo',
         hasDropMenu: true,
+        submenus: [
+            {
+                label: 'Agentes',
+                slug: 'agents',
+                newTab: false,
+            },
+            {
+                label: 'Mapas',
+                slug: 'maps',
+                newTab: false,
+            },
+            {
+                label: 'Arsenal',
+                slug: 'arsenal',
+                newTab: false,
+            },
+        ],
     },
     {
         label: 'Mídia',
@@ -25,10 +42,49 @@ const MENU_ITEMS: MenuItemProps[] = [
     {
         label: 'Suporte',
         hasDropMenu: true,
+        submenus: [
+            {
+                label: 'Requisitos',
+                slug: 'specs',
+                newTab: false,
+            },
+            {
+                label: 'Suporte',
+                slug: 'suport',
+                newTab: false,
+            },
+            {
+                label: 'Código da Comunidade',
+                slug: 'news/announcements/codigo-da-comunidade-de-valorant',
+                newTab: false,
+            },
+        ],
     },
     {
         label: 'Social',
         hasDropMenu: true,
+        submenus: [
+            {
+                label: 'Facebook',
+                slug: 'https://www.facebook.com/VALORANTbrasil/',
+                newTab: true,
+            },
+            {
+                label: 'YouTune',
+                slug: 'https://www.youtube.com/channel/UCgWiuB2PQIUhJgEN9No281g',
+                newTab: true,
+            },
+            {
+                label: 'Instagram',
+                slug: 'https://www.instagram.com/valorantbrasil/',
+                newTab: true,
+            },
+            {
+                label: 'Twitter',
+                slug: 'https://twitter.com/valorantbrasil',
+                newTab: true,
+            },
+        ],
     },
     {
         label: 'Esports',
@@ -37,13 +93,40 @@ const MENU_ITEMS: MenuItemProps[] = [
     {
         label: 'Comunidade',
         hasDropMenu: true,
+        submenus: [
+            {
+                label: 'Discord',
+                slug: 'https://www.facebook.com/VALORANTbrasil/',
+                newTab: true,
+            },
+            {
+                label: 'Fórum',
+                slug: 'https://www.youtube.com/channel/UCgWiuB2PQIUhJgEN9No281g',
+                newTab: true,
+            },
+            {
+                label: 'Grupo do Facebook',
+                slug: 'https://www.instagram.com/valorantbrasil/',
+                newTab: true,
+            },
+            {
+                label: 'Torneios da comunidade',
+                slug: 'https://twitter.com/valorantbrasil',
+                newTab: true,
+            },
+            {
+                label: 'Programas de apoio',
+                slug: 'https://twitter.com/valorantbrasil',
+                newTab: true,
+            },
+        ],
     },
 ];
 
 export function MenuLeft() {
     return (
         <div className={styles['menu-left']}>
-            <span>
+            <span className={styles['menu-logo']}>
                 <RiotLogo fill="#fff" width="85" />
                 <ChevronDown />
             </span>
@@ -57,6 +140,7 @@ export function MenuLeft() {
                             label={item.label}
                             href={item.href}
                             hasDropMenu={item.hasDropMenu}
+                            submenus={item.submenus}
                         />
                     ))}
                 </ul>

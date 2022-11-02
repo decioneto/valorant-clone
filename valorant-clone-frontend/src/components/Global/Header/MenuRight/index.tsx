@@ -5,7 +5,7 @@ import styles from './styles.module.scss';
 export function MenuRight() {
     return (
         <div className={styles['menu-right']}>
-            <Globe size={24} />
+            <Globe size={18} />
             <SimpleButton label="Jogue agora!" />
         </div>
     );

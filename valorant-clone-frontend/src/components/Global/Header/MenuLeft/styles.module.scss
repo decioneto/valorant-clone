@@ -3,11 +3,31 @@
     justify-content: flex-start;
     align-items: center;
     gap: 1.5rem;
+    height: 100%;
 
-    ul {
+    .menu-logo {
         display: flex;
         align-items: center;
-        gap: 2rem;
-        list-style: none;
+        gap: 4px;
+        cursor: pointer;
+
+        &:hover {
+            svg {
+                fill: var(--tomato-100);
+            }
+        }
+    }
+
+    nav {
+        height: 100%;
+        display: flex;
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+        }
     }
 }

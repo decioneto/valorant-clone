@@ -2,4 +2,8 @@
     display: flex;
     align-items: center;
     gap: 3rem;
+
+    svg {
+        stroke: var(--white-100);
+    }
 }
