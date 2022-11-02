@@ -96,27 +96,27 @@ const MENU_ITEMS: MenuItemProps[] = [
         submenus: [
             {
                 label: 'Discord',
-                slug: 'https://www.facebook.com/VALORANTbrasil/',
+                slug: 'https://discord.com/invite/valorant-br',
                 newTab: true,
             },
             {
                 label: 'Fórum',
-                slug: 'https://www.youtube.com/channel/UCgWiuB2PQIUhJgEN9No281g',
+                slug: 'https://forums.comunidades.riotgames.com/t5/VALORANT/ct-p/VALORANT?_ga=2.150366833.694454152.1667350307-1904781289.1664718873',
                 newTab: true,
             },
             {
                 label: 'Grupo do Facebook',
-                slug: 'https://www.instagram.com/valorantbrasil/',
+                slug: 'https://www.facebook.com/groups/VALORANT.oficialbr/',
                 newTab: true,
             },
             {
                 label: 'Torneios da comunidade',
-                slug: 'https://twitter.com/valorantbrasil',
+                slug: 'https://playvalorant.com/pt-br/news/tags/torneios-da-comunidade/',
                 newTab: true,
             },
             {
                 label: 'Programas de apoio',
-                slug: 'https://twitter.com/valorantbrasil',
+                slug: 'https://www.facebook.com/groups/torneiosdecomunidade.rg',
                 newTab: true,
             },
         ],
@@ -137,6 +137,7 @@ export function MenuLeft() {
                 <ul>
                     {MENU_ITEMS.map((item) => (
                         <MenuItem
+                            key={item.label}
                             label={item.label}
                             href={item.href}
                             hasDropMenu={item.hasDropMenu}

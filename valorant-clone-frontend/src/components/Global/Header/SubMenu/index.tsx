@@ -5,7 +5,7 @@ export function SubMenu(props: SubMenuProps) {
         <div className={props.className}>
             <ul>
                 {props.submenusItems.map((item) => (
-                    <li>
+                    <li key={item.slug}>
                         <a
                             target={item.newTab ? '_blank' : '_self'}
                             href={item.slug}
