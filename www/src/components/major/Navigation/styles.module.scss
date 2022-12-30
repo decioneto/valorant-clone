@@ -1,0 +1,27 @@
+.container {
+    height: 80px;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--gray-100);
+    border-bottom: 1px solid var(--gray-300);
+
+    .menu-left {
+        display: flex;
+        gap: 2rem;
+
+        nav {
+            margin: auto 0;
+
+            ul {
+                list-style: none;
+                display: flex;
+                gap: 2rem;
+            }
+        }
+    }
+
+    .menu-right {
+        display: flex;
+    }
+}
